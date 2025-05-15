@@ -1,0 +1,271 @@
+@charset "UFT-8";
+
+body{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.973);
+        color: white;
+}
+
+/* Págia 1 */
+
+main.page1>img{
+        max-width: 320px;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        margin: 10px 0px 15px 0px;
+        border-radius: 10px;
+        box-shadow: 3px 2px 10px rgba(255, 255, 255, 0.349),
+                    -3px -2px 10px rgba(255, 255, 255, 0.349);
+}
+
+main.page1>div>header>h2{
+        font-size: 25px;
+        text-align: start;
+        padding: 0px 10px;
+        margin: 15px 5px 0px 5px;
+}
+
+main.page1>div>header>h3{
+        font-size: 13px;
+        text-align: start;
+        padding: 0px 10px;
+        margin: 0px 5px 0px 5px;
+}
+
+div.progress{
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+        margin: 10px 0px 2px 0px;
+        background-color: rgba(255, 255, 255, 0.616);
+}
+
+div.numbers{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0px 5px;
+}
+
+h4.init, h4.end{
+        display: inline;
+        margin: 0px;
+}
+
+div.buttons{
+        display: flex;
+        margin: 10px 10px;
+        justify-content: space-between;
+        align-items: center;
+}
+
+div.buttons>div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 200px;
+}
+
+button.backwar, button.fowar{
+        background-color: transparent;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+                border: none;
+}
+
+button.backwar>i, button.fowar>i{
+        scale:1.3;
+        color: rgba(255, 255, 255, 0.945)
+}
+
+button.play{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: none;
+}
+
+button.play>i{
+        margin: 24px 22px;
+        scale: 3;
+        color: rgba(255, 255, 255, 0.945)
+}
+
+button.rand, button.repe{
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+}
+
+button.rand>i, button.repe>i{
+        scale: 2;
+        color: rgba(255, 255, 255, 0.945)
+}
+
+button:active{
+        background-color: rgba(255, 255, 255, 0.322);
+}
+
+/* Página 2 */
+
+main.page2{
+        background-color: rgb(27, 27, 27);
+        width: fit-content;
+        margin: 20px auto 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 2px 10px rgba(255, 255, 255, 0.349),
+                    -5px -2px 10px rgba(255, 255, 255, 0.349);
+}
+
+div.container2{
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+}
+
+div.container2>img{
+        background-color: white;
+        display: block;
+        width: 320px;
+        height: auto;
+        margin: 0px;
+        border-radius: 10px;
+}
+
+div.container2>span{
+        position: absolute;
+        display: inline;
+        color: black;
+        font-size: 27px;
+        top: 10%;
+        transform: translate(-40%, -50%);
+}
+
+div.inf_casal{
+        margin: 0px;
+}
+
+div.inf_casal>header{
+        margin: 10px 0px;
+        text-align: start;
+}
+
+div.inf_casal>header>h2{
+        font-size: 27px;
+        margin: 0px;
+        padding: 0px 10px;
+}
+
+div.inf_casal>header>h3{
+        font-size: 12px;
+        margin: 0px;
+        padding: 0px 10px 0px 14px;
+}
+
+div.contadores{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+}
+
+div.contadores>div{
+        display: flex;
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.185);
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.274);
+}
+
+/* Página 3 */
+
+main.page3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: image-set("img/img_p.png"), linear-gradient(90deg, rgba(49, 49, 49, 0.322), rgba(49, 49, 49, 0.322));
+        margin: 20px auto 20px auto;
+        background-color: transparent;
+        background-size: cover;
+        width: 340px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 3px 2px 10px rgba(255, 255, 255, 0.349),
+                    -3px -2px 10px rgba(255, 255, 255, 0.349);
+}
+
+main.page3>h2{
+        font-size: 26px;
+        text-align: start;
+        margin: 20px 0px;
+        padding: 0px 15px;
+}
+
+main.page3>button{
+        background-color: rgba(255, 255, 255, 0.507);
+        border: none;
+        width: 130px;
+        height: 40px;
+        margin: 20px 20px;
+        border-radius: 5px;
+}
+
+/* Página 4 */
+
+main.page4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: image-set("img/img_p.png"), linear-gradient(90deg, rgba(49, 49, 49, 0.322), rgba(49, 49, 49, 0.322));
+        margin: 20px auto 20px auto;
+        background-color: transparent;
+        background-size: cover;
+        width: 340px;
+        height: 500px;
+        border-radius: 10px;
+        box-shadow: 3px 2px 10px rgba(255, 255, 255, 0.349),
+                    -3px -2px 10px rgba(255, 255, 255, 0.349);
+}
+
+main.page4>div{
+        display: inline;
+        position: relative;
+        bottom: 50px;
+}
+
+main.page4>div>h2{
+        font-size: 30px;
+}
+
+main.page4>div>h3{
+        font-size: 14px;
+}
+
+main.page4>button{
+        display: inline;
+        position: relative;
+        top: 80px;
+        background-color: rgba(255, 255, 255, 0.507);
+        border: none;
+        width: 130px;
+        height: 40px;
+        margin: 20px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+}
