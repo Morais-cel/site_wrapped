@@ -9,11 +9,44 @@
 </head>
 <body>
     <main class="page1">
-        <img src="Img/img_p.png" alt="">
+        
+        <div class="container_init">
+            <div class="carrossel">
+            
+                <input type="radio" name="radio-btn" id="r1" checked="true">
+                <input type="radio" name="radio-btn" id="r2">
+                <input type="radio" name="radio-btn" id="r3">
+                <input type="radio" name="radio-btn" id="r4">
+                <input type="radio" name="radio-btn" id="r5">
+
+                <div class="slide first"><img src="Img/jojo1.avif" alt=""></div>
+                <div class="slide"><img src="Img/jojo2.jpg" alt=""></div>
+                <div class="slide"><img src="Img/jojo3.webp" alt=""></div>
+                <div class="slide"><img src="Img/jojo4.jpg" alt=""></div>
+                <div class="slide"><img src="Img/img_p.png" alt=""></div>
+                
+                <div class="auto_nav">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+            </div>
+
+            <div class="manual_nav">
+                <label for="r1" class="manual_btn"></label>
+                <label for="r2" class="manual_btn"></label>
+                <label for="r3" class="manual_btn"></label>
+                <label for="r4" class="manual_btn"></label>
+                <label for="r5" class="manual_btn"></label>
+            </div>
+
+        </div>
 
         <div>
             <header>
-                <h2>
+                <h2 class="Music">
                     Título
                 </h2>
 
@@ -52,55 +85,98 @@
     </main>
 
     <main class="page2">
-        <div class="container2">
-            <img src="Img/img_p.png" alt="">
-
-            <span>
-                Sobre o casal
-            </span>
-        </div>
-
-        <div class="inf_casal">
-            <header>
-                <h2>
-                    Nomes
-                </h2>
-                <h3>
-                    Data de ínicio
-                </h3>
-            </header>
-
-                <div class="contadores">
-                    <div>
-                        Anos
+        <div class="container_main">
+            <div class="container2">
+                <img src="Img/img_p.png" alt="">
+                <span>
+                    Sobre o casal
+                </span>
+            </div>
+            <div class="inf_casal">
+                <header>
+                    <h2 id="Nome_casal">
+                        Nomes
+                    </h2>
+                    <h3 id="Init_date">
+                        Data de ínicio
+                    </h3>
+                </header>
+                    <div class="contadores steam_anim" >
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Anos">
+                                    2
+                                </div>
+                                <p>
+                                    Anos
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Meses">
+                                    2
+                                </div>
+                                <p>
+                                    Meses
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Semanas">
+                                    2
+                                </div>
+                                <p>
+                                    Semanas
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Dias">
+                                    2
+                                </div>
+                                <p>
+                                    Dias
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Horas">
+                                    2
+                                </div>
+                                <p>
+                                    Horas
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Minutos">
+                                    2
+                                </div>
+                                <p>
+                                    Minutos
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        Meses
-                    </div>
-                    <div>
-                        Semanas
-                    </div>
-                    <div>
-                        Dias
-                    </div>
-                    <div>
-                        Horas
-                    </div>
-                    <div>
-                        Minutos
-                    </div>
-                </div>
+            </div>
         </div>
     </main>
 
     <main class="page3">
-        <h2>
-            Mensagem especial
-        </h2>
-        
-        <button>
-            Mostra mensagem
-        </button>
+        <div class="container_main3">
+            <h2>
+                Mensagem especial
+            </h2>
+            
+            <button>
+                Mostra mensagem
+            </button>
+        </div>
     </main>
 
     <main class="page4">
@@ -118,5 +194,7 @@
             Vamos lá!
         </button>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
