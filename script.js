@@ -44,8 +44,20 @@ function next_img(){
     act_slide.checked=true
 }
 
+function msg_show(){
+    const msg=document.getElementById("msg");const text=document.getElementById("text");
+    const body=document.getElementsByTagName("body")[0]
+
+    msg.style.display="block";
+    body.style.overflowY="hidden"
+    text.scrollIntoView({
+        behavior: "smooth",
+        block: "center",  
+    })
+}
+
 function timer(){
-/* Definir data de início de relacionamento */
+
     const Year_init= 2022
     const Month_init= 9
     const Day_init= 3
