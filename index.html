@@ -8,7 +8,7 @@
     <title>Wrapped</title>
 </head>
 <body>
-    <main class="page1">
+    <main id="page1">
         
         <div class="container_init">
             <div class="carrossel">
@@ -46,11 +46,11 @@
 
         <div>
             <header>
-                <h2 class="Music">
+                <h2 id="Music">
                     Título
                 </h2>
 
-                <h3>
+                <h3 id="Artist">
                     Artista
                 </h3>
             </header>
@@ -84,7 +84,7 @@
         </div>
     </main>
 
-    <main class="page2">
+    <main id="page2">
         <div class="container_main">
             <div class="container2">
                 <img src="Img/img_p.png" alt="">
@@ -168,38 +168,31 @@
     </main>
 
     <main id="page3">
-        <div id="msg" onclick="">
+        <div id="msg" onclick="msg_hidde()">
             <div id="text">
                 <p>
-                    
                 </p>
             </div>
         </div>
-        <div id="container_main3">
-            <h2>
-                Mensagem especial
-            </h2>
+        <div id="container_main3" onclick="msg_show()">
             
-            <button onclick="msg_show()">
-                Mostra mensagem
-            </button>
         </div>
     </main>
 
-    <main class="page4">
-        <div>
-            <h2>
-                Seus <br>Relacionamento <br>Wrapped
-            </h2>
-
-            <h3>
-                Explore o seu tempo em casal
-            </h3>
+    <main id="page4">
+        <div id="container_main4">
+            <div>
+                <h2>
+                    Seus <br>Relacionamento <br>Wrapped
+                </h2>
+                <h3>
+                    Explore o seu tempo em casal
+                </h3>
+            </div>
+            <button>
+                Vamos lá!
+            </button>
         </div>
-
-        <button>
-            Vamos lá!
-        </button>
     </main>
 
     <script src="script.js"></script>

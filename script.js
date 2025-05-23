@@ -45,16 +45,32 @@ function next_img(){
 }
 
 function msg_show(){
-    const msg=document.getElementById("msg");const text=document.getElementById("text");
+    const msg=document.getElementById("msg")
+    const container=document.getElementById("container_main3")
     const body=document.getElementsByTagName("body")[0]
 
     msg.style.display="block";
-    body.style.overflowY="hidden"
-    text.scrollIntoView({
+    body.style.overflowY="hidden";
+    container.scrollIntoView({
         behavior: "smooth",
         block: "center",  
-    })
+    });
+    container.style.animation="none"
+
 }
+
+function msg_hidde() {
+    const msg=document.getElementById("msg")
+    const container=document.getElementById("container_main3")
+    const body=document.getElementsByTagName("body")[0]
+
+    msg.style.display="none";
+    body.style.overflowY="auto";
+
+    container.style.animation="bounce_container 2s ease infinite"
+    
+}
+
 
 function timer(){
 
@@ -72,6 +88,7 @@ function structure(){
 
     const casal= "Júlia + Pedro"
     const special_date= "03 set. 2022"
+    
 
     const text_name= document.getElementById("Nome_casal")
     const special_text= document.getElementById("Init_date")
