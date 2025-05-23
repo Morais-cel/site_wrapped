@@ -50,30 +50,6 @@ body{
 	}
 }
 
-.manual_nav{
-	position: absolute;
-	width: 300px;
-	margin-top: -20px;
-	display: flex;
-	justify-content: center;
-}
-
-.manual_btn{
-	border: 2px solid black;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
-}
-
-.manual_btn:not(:last-child){
-	margin-right: 2px;
-}
-
-.manual_btn:hover{
-	background: black;
-}
-
 #r1:checked ~ .first{
 	margin-left: 0;
 }
@@ -92,45 +68,6 @@ body{
 
 #r5:checked ~ .first{
 	margin-left: -100%;
-}
-
-.auto_nav div{
-	border: 2px solid blueviolet;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 1s;
-}
-
-.auto_nav{
-	position: absolute;
-	width: 300px;
-	margin-top: 280px;
-	display: flex;
-	justify-content: center;
-}
-
-.auto_nav div:not(:last-child){
-	margin-right: 2px;
-}
-
-#r1:checked ~ .auto_nav .auto-btn1{
-	background: black;
-}
-
-#r2:checked ~ .auto_nav .auto-btn2{
-	background: black;
-}
-
-#r3:checked ~ .auto_nav .auto-btn3{
-	background: black;
-}
-
-#r4:checked ~ .auto_nav .auto-btn4{
-	background: black;
-}
-#r5:checked ~ .auto_nav .auto-btn5{
-	background: black;
 }
 
 #Music{
