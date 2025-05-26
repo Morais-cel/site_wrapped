@@ -77,11 +77,11 @@ function msg_hidde() {
 
 function timer(){
 
-    const Year_init= 2022
-    const Month_init= 9
-    const Day_init= 3
-    const Hour_init= 21
-    const Min_init= 0
+    const Year_init= NaN /* Nan */
+    const Month_init= NaN
+    const Day_init= NaN
+    const Hour_init= NaN
+    const Min_init= NaN
 
     def_time(Year_init,Month_init,Day_init,Hour_init,Min_init)
     setInterval(timer,60000)
@@ -107,8 +107,8 @@ function music_ps(){
 
 function structure(){
 
-    const casal= "Júlia + Pedro"
-    const special_date= "03 set. 2022"
+    const casal= "Casal"
+    const special_date= "Data"
     
 
     const text_name= document.getElementById("Nome_casal")
@@ -121,5 +121,6 @@ function structure(){
     setInterval(next_img,5000)
 
 }
+
 
 structure()
