@@ -3,6 +3,17 @@
 
     document.getElementById("music").volume=0.25
 
+function gesture(){
+    const touch_container= document.getElementById("page4_icon")
+    const container= document.getElementById("container_page4")
+
+    touch_container.addEventListener("touchstart", (e) => {
+        touchS_Y= e.changedTouches.screenY
+    }, false)
+
+    window.alert(touchS_Y)
+}
+
 function def_time(year,month,day,hour,min){
 /* Variáveis do próprio JS */
 
@@ -121,6 +132,5 @@ function structure(){
     setInterval(next_img,5000)
 
 }
-
 
 structure()
