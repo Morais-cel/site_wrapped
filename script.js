@@ -1,6 +1,8 @@
 /* Vari Globais */
     var count=1
 
+    document.getElementById("music").volume=0.25
+
 function def_time(year,month,day,hour,min){
 /* Variáveis do próprio JS */
 
@@ -47,15 +49,17 @@ function next_img(){
 function msg_show(){
     const msg=document.getElementById("msg")
     const container=document.getElementById("container_main3")
+    const container_text=document.getElementById("text_container")
     const body=document.getElementsByTagName("body")[0]
 
     msg.style.display="block";
+    container_text.style.display="block";
     body.style.overflowY="hidden";
     container.scrollIntoView({
         behavior: "smooth",
         block: "center",  
     });
-    container.style.animation="none"
+    container.style.animationPlayState = 'paused'
 
 }
 
@@ -67,10 +71,9 @@ function msg_hidde() {
     msg.style.display="none";
     body.style.overflowY="auto";
 
-    container.style.animation="bounce_container 2s ease infinite"
+    container.style.animationPlayState = 'running';
     
 }
-
 
 function timer(){
 
@@ -82,6 +85,24 @@ function timer(){
 
     def_time(Year_init,Month_init,Day_init,Hour_init,Min_init)
     setInterval(timer,60000)
+}
+
+function music_ps(){
+    count++
+    const bars= document.getElementsByClassName("bar")
+    const audio= document.getElementById("music")
+
+    if(count%2!=0){
+        audio.play();
+        for (let bar of bars){
+            bar.style.animationPlayState = 'running';
+        }
+    }else{
+        audio.pause();
+        for (let bar of bars){
+            bar.style.animationPlayState = 'paused';
+        }
+    }
 }
 
 function structure(){
@@ -98,6 +119,7 @@ function structure(){
 
     requestAnimationFrame(timer)
     setInterval(next_img,5000)
+
 }
 
 structure()

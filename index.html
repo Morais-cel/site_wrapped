@@ -10,7 +10,7 @@
 <body>
     <main id="page1">
         
-        <div class="container_init" onclick="next_img()">
+        <div class="container_carrossel" onclick="next_img()">
             <div class="carrossel">
             
                 <input type="radio" name="radio-btn" id="r1" checked="true">
@@ -30,43 +30,44 @@
 
         </div>
 
-        <div>
-            <header>
-                <h2 id="Music">
-                    Título
-                </h2>
-
-                <h3 id="Artist">
-                    Artista
-                </h3>
+        <div id="music_player">
+            <header id="music_text">
+                <div id="desc">
+                    <h2 id="title">
+                        Título
+                    </h2>
+                    <h3 id="artist">
+                        Artista
+                    </h3>
+                </div>
             </header>
-
-            <span>
-                <div class="progress">
-                    <span class="BAR"></span>
+            <div id="container_buttons">
+                <span class="icon" id="back">
+                    <i class="fa-solid fa-backward-step"></i>
+                </span>
+                
+                <div id="music_bar" onclick="music_ps()">
+                    <audio id="music" autoplay >
+                        <source src="Msc/Music.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="ref_bar">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
 
-                <div class="numbers">
-                    <h4 class="init">
-                        00:00
-                    </h4>
-
-                    <h4 class="end">
-                        XX:XX
-                    </h4>
-                </div>
-            </span>
-
-            <div class="buttons">
-                <button class="rand"><i class="fa-solid fa-shuffle"></i></button>
-                <div>
-                    <button class="backwar"><i class="fa-solid fa-backward-step"></i></button>
-                    <button class="play"><i class="fa-solid fa-play"></i></button>
-                    <button class="fowar"><i class="fa-solid fa-forward-step"></i></button>
-                </div>
-                <button class="repe"><i class="fa-solid fa-repeat"></i></button>
+                <span class="icon" id="next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </span>
             </div>
-
         </div>
     </main>
 
@@ -87,7 +88,7 @@
                         Data de ínicio
                     </h3>
                 </header>
-                    <div class="contadores steam_anim" >
+                    <div class="contadores" >
                         <div class="box">
                             <div class="box_text">
                                 <div id="Anos">
@@ -156,8 +157,31 @@
     <main id="page3">
         <div id="msg" onclick="msg_hidde()">
             <div id="text">
-                <p>
-                </p>
+                <main id="text_container">
+                    <header>
+                        <h1>
+                            Dedico essa mensagem para a pessoa que esteve comigo em meus momentos mais difíceis
+                        </h1>
+                        <div class="hor_row" style="margin-top: 10px;"></div>
+                    </header>
+                    
+                    <article>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci doloribus rerum, ea maxime neque totam temporibus? Reprehenderit animi ipsa excepturi commodi aperiam, eligendi tempore, quas architecto illo, necessitatibus cupiditate.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint adipisci doloribus rerum, ea maxime neque totam temporibus? Reprehenderit animi ipsa excepturi commodi aperiam, eligendi tempore, quas architecto illo, necessitatibus cupiditate.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias nobis vero reiciendis provident, modi molestiae tenetur! Eum atque eaque incidunt! Magnam reiciendis, voluptatibus quidem provident aut hic accusantium ratione nemo?
+                        </p>
+                    </article>
+
+                    <footer>
+                        <div class="hor_row" style="margin-bottom: 10px;"></div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </footer>
+                </main>
             </div>
         </div>
         <div id="container_main3" onclick="msg_show()">
