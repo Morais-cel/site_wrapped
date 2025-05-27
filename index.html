@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8e0ce60338.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Wrapped</title>
 </head>
@@ -48,7 +51,7 @@
                 
                 <div id="music_bar" onclick="music_ps()">
                     <audio autoplay id="music">
-                        <source src="Msc/Music.mp3" type="audio/mp3">
+                        <source src="Msc/Init.mp3" type="audio/mp3">
                     </audio>
                     <div id="ref_bar">
                         <div class="bar"></div>
@@ -64,7 +67,7 @@
                     </div>
                 </div>
 
-                <span class="icon" id="next">
+                <span class="icon" id="next" onclick="funct_next()">
                     <i class="fa-solid fa-forward-step"></i>
                 </span>
             </div>
@@ -75,9 +78,7 @@
         <div class="container_main">
             <div class="container2">
                 <img src="Img/img_p.png" alt="">
-                <span>
-                    Sobre o casal
-                </span>
+                
             </div>
             <div class="inf_casal">
                 <header>
@@ -111,16 +112,6 @@
                         </div>
                         <div class="box">
                             <div class="box_text">
-                                <div id="Semanas">
-                                    2
-                                </div>
-                                <p>
-                                    Semanas
-                                </p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="box_text">
                                 <div id="Dias">
                                     2
                                 </div>
@@ -146,6 +137,16 @@
                                 </div>
                                 <p>
                                     Minutos
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box_text">
+                                <div id="Segundos">
+                                    2
+                                </div>
+                                <p>
+                                    Segundos
                                 </p>
                             </div>
                         </div>
@@ -204,7 +205,11 @@
                     <i id="page4_icon" class="fa-solid fa-angle-up"></i>
                 </div>
             </div>
-            <div id="page4_confirm">Teste</div>
+            <div id="page4_confirm">
+                <div>
+                    <p>Arraste para iniciar</p>
+                </div>
+            </div>
         </div>
     </main>
 

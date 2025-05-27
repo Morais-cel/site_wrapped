@@ -3,10 +3,17 @@
 /* Cores */
 
 :root{
-    --cor1: rgb(255, 255, 255);
-    --cor2: rgb(0,0,0);
-    --cor3: rgb(50,50,50);
+    --cor1: #F20C1F;
+    --cor2: #F20C49;
+    --cor3: #F20C78;
+    --cor4: #FE3A9C;
 }
+
+
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
 
 /* Código */
 
@@ -90,17 +97,24 @@ body{
         transform: translate(0%,-50%);
 
         & #title{
-                width: fit-content;
-                font-size: 25px;
-                text-align: start;
-                margin: 0;
+            width: fit-content;
+            height: 40px;
+            font-size: 40px;
+            text-align: start;
+            margin: 0;
+            font-family: "Zain", sans-serif;
+            font-weight: bold;
+            font-style: normal;
         };
 
         & #artist{
             width: fit-content;
-            font-size: 13px;
+            font-size: 18px;
             text-align: start;
             margin: 0;
+            font-family: "Zain", sans-serif;
+            font-weight: 300;
+            font-style: normal;
         }
 }
 
@@ -129,6 +143,7 @@ body{
             left: 50%;
             transform: translate(-50%,-50%);
             font-size: 24px;
+            color: var(--cor3);
         }
 
         & #back{
@@ -189,37 +204,37 @@ body{
                 }
 
                 & .bar:nth-child(4){
-                    background: var(--cor1);
+                    background: var(--cor4);
                     animation-delay: 0.4s;
                 }
 
                 & .bar:nth-child(5){
-                    background: var(--cor2);
+                    background: var(--cor1);
                     animation-delay: 0.2s;
                 }
 
                 & .bar:nth-child(6){
-                    background: var(--cor3);
+                    background: var(--cor2);
                     animation-delay: 0.2s;
                 }
 
                 & .bar:nth-child(7){
-                    background: var(--cor1);
+                    background: var(--cor3);
                     animation-delay: 0.4s;
                 }
                 
                 & .bar:nth-child(8){
-                    background: var(--cor2);
+                    background: var(--cor4);
                     animation-delay: 0.6s;
                 }
 
                 & .bar:nth-child(9){
-                    background: var(--cor3);
+                    background: var(--cor1);
                     animation-delay: 0.8s;
                 }
 
                 & .bar:nth-child(10){
-                    background: var(--cor1);
+                    background: var(--cor2);
                     animation-delay: 1s;
                 }
             }
@@ -259,7 +274,7 @@ body{
         top: -5px;
         width: calc(100% + 10px);
         height: calc(100% + 10px);
-        background: linear-gradient(45deg, var(--cor1), var(--cor2), var(--cor3));
+        background: linear-gradient(45deg, var(--cor1), var(--cor4));
         background-size: 200%;
         border-radius:10px;
         animation: steam 5s linear infinite;
@@ -294,15 +309,6 @@ body{
         border-radius: 10px;
 }
 
-.container2>span{
-        position: absolute;
-        display: inline;
-        color: black;
-        font-size: 27px;
-        top: 10%;
-        transform: translate(-40%, -50%);
-}
-
 .inf_casal{
         margin: 0px;
         position: relative;
@@ -311,11 +317,14 @@ body{
 .inf_casal>header{
         margin: 10px 0px;
         text-align: start;
+        font-family: 'Zain';
 }
 
 .inf_casal>header>h2{
-        max-width: 160px;
-        font-size: 25px;
+        width: fit-content;
+        height: 41px;
+        font-size: 37px;
+        font-weight: bold;
         margin: 0px;
         margin: 0px 0px 0px 10px;
         overflow: hidden;
@@ -325,13 +334,14 @@ body{
 }
 
 .inf_casal>header>h3{
-        max-width: 92px;
-        font-size: 16px;
+        width: fit-content;
+        font-size: 19px;
+        font-weight: 300;
         margin: 0px;
         margin: 0px 0px 0px 11px;
         overflow: hidden;
         text-wrap: nowrap;
-        animation: slide 2s ease-in;
+        animation: slide 2s ease-in .1s;
 }
 
 .contadores{
@@ -355,7 +365,7 @@ body{
         top: -2.5px;
         width: calc(100% + 5px);
         height: calc(100% + 5px);
-        background: linear-gradient(90deg, var(--cor1), var(--cor2), var(--cor3));
+        background: linear-gradient(45deg, var(--cor3), var(--cor4));
         background-size: 200%;
         border-radius: 0px 10px 10px 0px;
         animation: steam 5s linear infinite;
@@ -370,7 +380,7 @@ body{
         width: 80px;
         height: 80px;
         background: rgba(255, 255, 255, 0.185);
-        box-shadow: -3px 3px 3px rgba(255, 255, 255, 0.555);
+        box-shadow: -3px 3px 3px var(--cor3);
         border-radius: 10px;
         animation: 
                 opacity_anim 3s ease;
@@ -383,8 +393,10 @@ body{
             top: 40%;
             left: 50%;
             transform: translate(-50%,-50%);
-            font-size: 26px;
-            
+            font-size: 32px;
+            font-family: "Love Light", cursive;
+            font-weight: 500;
+            font-style: normal;
         };
 
         & p{
@@ -393,7 +405,9 @@ body{
             bottom: 10%;
             transform: translate(-50%,0%);
             margin: 0px;
-            }
+            font-family: 'Zain';
+            font-weight: 300;
+        }
 }
 
 /* Página 3 */
@@ -415,7 +429,7 @@ body{
         width: calc(100% + 4px);
         height: calc(100% + 4px);
         z-index: -1;
-        background: linear-gradient(45deg, var(--cor1), var(--cor2), var(--cor3));
+        background: linear-gradient(45deg, var(--cor1), var(--cor4));
         background-size: 200%;
         filter: blur(10px);
         animation: steam 5s linear infinite 2s;
@@ -451,6 +465,8 @@ body{
         position: relative;
         width: 100%;
         height: 100%;
+        font-family: "Zain", sans-serif;
+        font-style: normal;
 
 
         & header, article,  footer{
@@ -467,6 +483,9 @@ body{
 
         & header{
             top: 0px;
+            height: 20%;
+            font-size: 19px;
+            font-weight: bold;
 
             & h1{
                 margin: 0
@@ -475,14 +494,22 @@ body{
 
         & article{
             width: 100%;
-            top: 50%;
+            height: 65%;
+            top: 56%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+            font-family: "Zain", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 22px;
         };
 
         & footer{
             width: 100%;
+            height: 5%;
             bottom: 0px;
+            font-size: 19px;
+            font-weight: 300;
         }
 }
 
@@ -521,9 +548,10 @@ body{
         width: calc(100% + 4px);
         height: calc(100% + 4px);
         z-index: -1;
-        background: linear-gradient(45deg, var(--cor1), var(--cor2), var(--cor3));
+        background: linear-gradient(45deg, var(--cor1), var(--cor4));
         background-size: 200%;
         filter: blur(10px);
+        border-radius: 10px;
         animation: steam 5s linear infinite 2s;
 }
 
@@ -531,6 +559,7 @@ body{
         width: 100%;
         height: 550px;
         overflow-y: hidden;
+        border-radius: 10px;
 }
 
 #container_page4{
@@ -539,7 +568,6 @@ body{
         height: 550px;
         background: url(Img/wrapped-banner.png) rgba(255, 255, 255, 0.178) no-repeat center center;
         background-size: cover;
-        border-radius: 10px;
 
         & #page4_text{
                 position: absolute;
@@ -547,14 +575,14 @@ body{
                 left: 50%;
                 transform: translate(-50%,0%);
                 width: 100%;
+                background: transparent;
 
                 & h2,h3{
-                        margin: 0;
+                    margin: 0;
                 }
 
-                & h2{   
-                       
-                        font-size: 36px;
+                & h2{  
+                    font-size: 36px;
                 }
 
                 & h3{
@@ -569,6 +597,7 @@ body{
                 left: 50%;
                 transform: translate(-50%,0%);
                 animation: bounce_icon 2s ease infinite;
+                cursor: pointer;
 
                 & #page4_icon{
                         font-size: 36px;
@@ -578,39 +607,40 @@ body{
 }
 
 #page4_confirm{
+        position: relative;
+        z-index: -1;
         width: 100%;
-        height: 50px;
-        background: transparent;
-        margin-top: -5px;
+        height: 60px;
+        background: #020202;
+        margin-top: -8px;
         border-radius: 0px 0px 10px 10px;
-        color: red;
+        padding-top: 8px;
+        
+        & div{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 160px;
+            height: 40px;
+            margin: 0;
+
+            & p{
+                margin: 0;
+                padding: 5px;
+            }
+        }
 }
-
-/* 
-                width: 200px;
-                height: 50px;
-                background: rgba(255, 255, 255, 0.473);
-                border-radius: 10px;
-                cursor: pointer;
-
-                & p{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    width: 100%;
-                    margin: 0;
-                    font-size: 26px;
-                    color: black;
-                }
- */
 
 /* Animações */
 
 @keyframes slide{
         from{
             width: 0px;
-            border-right: .15em solid white;
+            border-right: .05em solid white;
         }
         to{
             width: 100%;
@@ -688,6 +718,6 @@ body{
             height: 2px;
         }
         50%{
-            height: 80%;
+            height: 70%;
         }
 }
