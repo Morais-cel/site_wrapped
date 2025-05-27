@@ -4,6 +4,51 @@
     var count_music=1
 
     document.getElementById("music").volume=0.25
+    const page1= document.getElementById("page1")
+    const page2= document.getElementById("page2")
+    const page3= document.getElementById("page3")
+    const page4= document.getElementById("page4")
+
+function next_page(){
+    page4.style.animationPlayState="running"
+    setTimeout(()=>{
+        page3.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        })
+        setTimeout(()=>{
+            page4.style.display="none"
+            page3.style.animationPlayState="running"
+            setTimeout(()=>{
+                page2.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                })
+                setTimeout(()=>{
+                    page3.style.display="none"
+                    page2.style.animationPlayState="running"
+                    setTimeout(()=>{
+                        page1.scrollIntoView({
+                        behavior: "smooth",
+                        block: "end",
+                        })
+                        setTimeout(()=>{
+                            page2.style.display="none"
+                            page1.style.animationPlayState="running"
+                            setTimeout(()=>{
+                                location.assign("Pages/page1.html")
+                            },500)
+                        },300)
+                    },500)
+                },300)
+            },500)
+        },300)
+    },500)
+
+    
+    
+}
+
 
 function funct_next(){
     player=document.getElementById("music")
@@ -186,9 +231,12 @@ arrow.addEventListener("touchmove", (e) => {
 arrow.addEventListener("touchend", () => {
     if(parseInt(box.style.marginTop)<=-40){
         box.style.marginTop=0
-        window.alert("teste")
+        next_page()
     }else{
         box.style.marginTop=0
     }
 })
+
+page1.style.animationPlayState=page2.style.animationPlayState=page3.style.animationPlayState=page4.style.animationPlayState="paused"
+
 structure()
