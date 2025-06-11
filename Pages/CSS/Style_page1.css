@@ -1,0 +1,123 @@
+@charset "UFT-8";
+
+body{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.973);
+        color: white;
+        animation: enter_animation 1s ease;
+
+        & #container_main{
+                position: relative;
+                width: 94vw;
+                height: 96vh;
+                margin: auto;
+                background: rgb(27, 27, 27);
+                border-radius: 10px;
+        }
+}
+
+#container_progress{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 10%;
+}
+
+#progress_bar{
+        position: relative;
+        height: 5px;
+        background: white;
+        border-radius: 20px;
+
+        & .dots{
+                position: absolute;
+                bottom: 50%;
+                transform: translate(0,50%);
+                width: 40px;
+                height: 20px;
+                background: white;
+                border-radius: 20px;
+                overflow: hidden;
+        };
+
+        & #first{
+                transform: translate(-50%,50%);
+                cursor: pointer
+        };
+
+        & #first_check{
+                position: absolute;
+                bottom: 50%;
+                transform: translate(0,50%);
+                z-index: -1;
+                transform: translate(-50%,50%);
+                width: 46px;
+                height: 26px;
+                background: red;
+                border-radius: 20px;
+                overflow-x: hidden;
+                animation: check_anim 1s ease;
+        }
+
+        & #second{
+                left: 50%;
+                transform: translate(-50%,50%);
+        };
+
+        & #second_check{
+                position: absolute;
+                bottom: 50%;
+                transform: translate(0,50%);
+                z-index: -1;
+                left: 50%;
+                transform: translate(-50%,50%);
+                width: 46px;
+                height: 26px;
+                background: red;
+                border-radius: 20px;
+        }
+        
+        & #third{
+                right: 0px;
+                transform: translate(50%,50%);
+        };
+
+        & #third_check{
+                position: absolute;
+                bottom: 50%;
+                transform: translate(0,50%);
+                z-index: -1;
+                right: 0px;
+                transform: translate(50%,50%);
+                width: 46px;
+                height: 26px;
+                background: red;
+                border-radius: 20px;
+        }
+}
+
+#progress_bar_check{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -2px;
+        left: 5%;
+        width: 30px;
+        height: 10px;
+        background: red;
+        border-radius: 10px;
+}
+
+@keyframes check_anim{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 46px;
+        height: 26px;
+    }
+}

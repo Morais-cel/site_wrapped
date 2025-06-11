@@ -4,6 +4,7 @@
     var count_music=1
 
     document.getElementById("music").volume=0.25
+
     const page1= document.getElementById("page1")
     const page2= document.getElementById("page2")
     const page3= document.getElementById("page3")
@@ -239,4 +240,7 @@ arrow.addEventListener("touchend", () => {
 
 page1.style.animationPlayState=page2.style.animationPlayState=page3.style.animationPlayState=page4.style.animationPlayState="paused"
 
+setTimeout(()=>{
+    document.getElementById("music").play()
+},1000)
 structure()
