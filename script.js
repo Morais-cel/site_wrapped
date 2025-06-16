@@ -18,24 +18,30 @@ function next_page(){
         block: "end",
         })
         setTimeout(()=>{
-            page4.style.display="none"
             page3.style.animationPlayState="running"
+            setTimeout(() => {
+                page4.style.display="none"
+            }, 1000);
             setTimeout(()=>{
                 page2.scrollIntoView({
                 behavior: "smooth",
                 block: "end",
                 })
                 setTimeout(()=>{
-                    page3.style.display="none"
                     page2.style.animationPlayState="running"
+                    setTimeout(() => {
+                        page3.style.display="none"
+                    }, 1000);
                     setTimeout(()=>{
                         page1.scrollIntoView({
                         behavior: "smooth",
                         block: "end",
                         })
                         setTimeout(()=>{
-                            page2.style.display="none"
                             page1.style.animationPlayState="running"
+                            setTimeout(() => {
+                                page2.style.display="none"
+                            }, 1000);
                             setTimeout(()=>{
                                 location.assign("Pages/page1.html")
                             },500)
@@ -52,7 +58,8 @@ function next_page(){
 
 
 function funct_next(){
-    player=document.getElementById("music")
+    const player=document.getElementById("music")
+    const bars= document.getElementsByClassName("bar")
 
     if (count_style<3){
         count_style++
@@ -84,6 +91,9 @@ function funct_next(){
     }
     player.load()
     player.play()
+    for (let bar of bars){
+            bar.style.animationPlayState = 'running';
+        }
 }
 
 function def_time(year,month,day,hour,min){
@@ -121,7 +131,7 @@ function def_time(year,month,day,hour,min){
 function next_img(){
     count_img++
     if (count_img>5) {
-        count=1
+        count_img=1
     }
 
     const act_slide=document.getElementById(`r${count_img}`)
@@ -130,7 +140,7 @@ function next_img(){
 
 function msg_show(){
     const msg=document.getElementById("msg")
-    const container=document.getElementById("container_main3")
+    const container=document.getElementById("container_page3")
     const container_text=document.getElementById("text_container")
     const body=document.getElementsByTagName("body")[0]
 
@@ -147,7 +157,7 @@ function msg_show(){
 
 function msg_hidde() {
     const msg=document.getElementById("msg")
-    const container=document.getElementById("container_main3")
+    const container=document.getElementById("container_page3")
     const body=document.getElementsByTagName("body")[0]
 
     msg.style.display="none";
